@@ -1,28 +1,26 @@
 /* app/globals.css */
 
-/* 1. Import Tailwind's base layers */
-@import "tailwindcss";
+/*
+If your editor flags “Unknown at rule @theme,” you can safely ignore it
+or add a lint comment to suppress that warning. Next.js will process it.
+*/
 
-/* 2. Declare Forest Hearth custom colors */
+/* 1) Tailwind’s base, components, and utilities layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2) CSS-first custom theme definitions (Forest Hearth palette) */
 @theme {
-  /* Background */
   --color-forest-bg: oklch(0.94 0.07 130);
-  /* Primary deep forest green */
   --color-forest-primary: #15803D;
-  /* Secondary mint accent */
   --color-forest-secondary: #4ADE80;
-  /* Neutral card background */
   --color-forest-neutral: #E4E4E7;
-  /* White tile face */
   --color-forest-tile: #FFFFFF;
-  /* Light green border */
   --color-forest-tile-border: #D1FAE5;
-  /* Dark slate text */
   --color-forest-text: #164E63;
-  /* White text on dark backgrounds */
   --color-forest-text-light: #FFFFFF;
 
-  /* Example: define legacy names for ease */
   --forest-bg: var(--color-forest-bg);
   --forest-primary: var(--color-forest-primary);
   --forest-secondary: var(--color-forest-secondary);
@@ -33,9 +31,8 @@
   --forest-text-light: var(--color-forest-text-light);
 }
 
-/* 3. Include Tailwind utilities (apply theme) */
+/* 3) Global base styles that use our custom variables */
 @layer base {
-  /* Set the page background */
   body {
     background-color: var(--forest-bg);
     background-image: url('/patterns/leaf-pattern.svg');
@@ -43,13 +40,7 @@
     background-repeat: repeat;
     color: var(--forest-text);
     font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
   }
-}
-
-@layer components {
-  /* (Optional) Any shadcn/ui or custom component overrides */
-}
-
-@layer utilities {
-  /* (Optional) Additional custom utilities */
 }

@@ -3,10 +3,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    appDir: true  // enables the App Router ("/app" folder)
-  },
-  // (No basePath or rewrites needed since this is standalone)
+  // No need for `experimental.appDir` in Next.js 14
 };
 
 module.exports = nextConfig;

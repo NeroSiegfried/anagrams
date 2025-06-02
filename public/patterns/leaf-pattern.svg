@@ -1,0 +1,12 @@
+<!-- public/patterns/leaf-pattern.svg -->
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="leafPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <!-- A single pale-green leaf shape -->
+      <path d="M10 5 C8 8, 8 12, 10 15 C12 12, 12 8, 10 5 Z" fill="rgba(22, 78, 99, 0.05)"></path>
+      <path d="M20 10 C18 13, 18 17, 20 20 C22 17, 22 13, 20 10 Z" fill="rgba(22, 78, 99, 0.05)"></path>
+      <path d="M30 5 C28 8, 28 12, 30 15 C32 12, 32 8, 30 5 Z" fill="rgba(22, 78, 99, 0.05)"></path>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#leafPattern)"></rect>
+</svg>
