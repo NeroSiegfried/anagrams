@@ -1,0 +1,55 @@
+/* app/globals.css */
+
+/* 1. Import Tailwind's base layers */
+@import "tailwindcss";
+
+/* 2. Declare Forest Hearth custom colors */
+@theme {
+  /* Background */
+  --color-forest-bg: oklch(0.94 0.07 130);
+  /* Primary deep forest green */
+  --color-forest-primary: #15803D;
+  /* Secondary mint accent */
+  --color-forest-secondary: #4ADE80;
+  /* Neutral card background */
+  --color-forest-neutral: #E4E4E7;
+  /* White tile face */
+  --color-forest-tile: #FFFFFF;
+  /* Light green border */
+  --color-forest-tile-border: #D1FAE5;
+  /* Dark slate text */
+  --color-forest-text: #164E63;
+  /* White text on dark backgrounds */
+  --color-forest-text-light: #FFFFFF;
+
+  /* Example: define legacy names for ease */
+  --forest-bg: var(--color-forest-bg);
+  --forest-primary: var(--color-forest-primary);
+  --forest-secondary: var(--color-forest-secondary);
+  --forest-neutral: var(--color-forest-neutral);
+  --forest-tile: var(--color-forest-tile);
+  --forest-tile-border: var(--color-forest-tile-border);
+  --forest-text: var(--color-forest-text);
+  --forest-text-light: var(--color-forest-text-light);
+}
+
+/* 3. Include Tailwind utilities (apply theme) */
+@layer base {
+  /* Set the page background */
+  body {
+    background-color: var(--forest-bg);
+    background-image: url('/patterns/leaf-pattern.svg');
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    color: var(--forest-text);
+    font-family: "Inter", sans-serif;
+  }
+}
+
+@layer components {
+  /* (Optional) Any shadcn/ui or custom component overrides */
+}
+
+@layer utilities {
+  /* (Optional) Additional custom utilities */
+}
